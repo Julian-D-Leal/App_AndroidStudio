@@ -44,7 +44,7 @@ public class Countries_fragment extends Fragment {
 
 
     private Button Signout;
-    private TextView username, name;
+    private TextView username;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     private ArrayAdapter adapter;

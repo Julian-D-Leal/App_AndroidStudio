@@ -101,4 +101,5 @@ public class CountryDetails_Fragment extends Fragment {
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
     }
+
 }

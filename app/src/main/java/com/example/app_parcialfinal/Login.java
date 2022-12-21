@@ -68,19 +68,27 @@ public class Login extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!username.getText().toString().equals("") && !password.getText().toString().equals("")){
-                    LoginVerification(username.getText().toString(), password.getText().toString());
+                if(internetIsConnected()){
+                    if(!username.getText().toString().equals("") && !password.getText().toString().equals("")){
+                        LoginVerification(username.getText().toString(), password.getText().toString());
+                    }else{
+                        Toast.makeText(getContext(), "Ingrese usuario y contraseña", Toast.LENGTH_SHORT).show();
+                    }
                 }else{
-                    Toast.makeText(getContext(), "Ingrese usuario y contraseña", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Conexión a internet fallida", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+                if(internetIsConnected()){
+                    signIn();
+                }else{
+                    Toast.makeText(getActivity(), "Conexión a internet fallida", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -168,7 +176,14 @@ public class Login extends Fragment {
 
         }
     }
-
+    public boolean internetIsConnected() {
+        try {
+            String command = "ping -c 1 google.com";
+            return (Runtime.getRuntime().exec(command).waitFor() == 0);
+        } catch (Exception e) {
+            return false;
+        }
+    }
     public void navigateToSecondActivity(){
         Intent intent = new Intent(getActivity(),Countries.class);
         intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TASK | intent.FLAG_ACTIVITY_CLEAR_TOP);
