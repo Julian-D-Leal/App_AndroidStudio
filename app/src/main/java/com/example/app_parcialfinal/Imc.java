@@ -45,7 +45,7 @@ public class Imc extends AppCompatActivity {
 
         double resultadoimc = npeso/(naltura * naltura);
 
-        imc.setText("IMC: " + String.format("%.2f",resultadoimc));
+        imc.setText("IMC: " + String.format("%.3f",resultadoimc));
 
         if(resultadoimc<18.5){
             descripcion.setText("bajo peso");
