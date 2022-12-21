@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,12 +26,33 @@
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
-            <Button
-                android:id="@+id/BtnSignout"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cerrar Sesión" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/BtnSignout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0B4C5F"
+                    android:text="Cerrar Sesión"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/Imc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0B4C5F"
+                    android:onClick="onClick"
+                    android:text="IMC"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
 
