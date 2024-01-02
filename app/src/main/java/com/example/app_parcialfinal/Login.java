@@ -1,6 +1,7 @@
 package com.example.app_parcialfinal;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;

@@ -31,7 +31,7 @@
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Nombre del país:"
                 android:textAllCaps="false"
@@ -43,6 +43,7 @@
                 android:id="@+id/CountryDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -56,7 +57,7 @@
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Capital del país:"
                 android:textColor="#000000"
@@ -67,6 +68,7 @@
                 android:id="@+id/CountryCapital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -80,7 +82,7 @@
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Región del país:"
                 android:textColor="#000000"
@@ -91,6 +93,7 @@
                 android:id="@+id/CountryRegion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -104,7 +107,7 @@
 
             <TextView
                 android:id="@+id/textView13"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Población del país:"
                 android:textColor="#000000"
@@ -115,6 +118,7 @@
                 android:id="@+id/CountryPopulation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -140,6 +144,7 @@
                 android:id="@+id/imageViewFlag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 tools:src="@tools:sample/backgrounds/scenic" />
